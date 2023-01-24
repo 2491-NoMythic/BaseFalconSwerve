@@ -20,8 +20,7 @@ public final class Constants {
         private Swerve () {}
         public static final int PIGEON_ID = 0;
         public static final boolean INVERT_GYRO = false; //TODO: This must be tuned to specific robot – Always ensure Gyro is CCW+ CW-
-        public static final int pigeonID = 1;
-        public static final boolean invertGyro = false; // Always ensure Gyro is CCW+ CW-
+        public static final String CANBUS_STRING = "Swerve"; //TODO: edit for each robot - use empty string for the rio bus
 
         public static final COTSFalconSwerveConstants chosenModule =  //TODO: This must be tuned to specific robot
             COTSFalconSwerveConstants.SDSMK4i(SDSMK4i_L3);

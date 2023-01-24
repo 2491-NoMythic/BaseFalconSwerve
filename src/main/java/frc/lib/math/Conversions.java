@@ -1,6 +1,7 @@
 package frc.lib.math;
 
 public class Conversions {
+    private Conversions () {}
 
     /**
      * @param positionCounts CANCoder Position Counts
@@ -45,8 +46,7 @@ public class Conversions {
      */
     public static double falconToRPM(double velocityCounts, double gearRatio) {
         double motorRPM = velocityCounts * (600.0 / 2048.0);        
-        double mechRPM = motorRPM / gearRatio;
-        return mechRPM;
+        return motorRPM / gearRatio; //RPM
     }
 
     /**
@@ -56,8 +56,7 @@ public class Conversions {
      */
     public static double RPMToFalcon(double RPM, double gearRatio) {
         double motorRPM = RPM * gearRatio;
-        double sensorCounts = motorRPM * (2048.0 / 600.0);
-        return sensorCounts;
+       return motorRPM * (2048.0 / 600.0); //Native Falcon units
     }
 
     /**
@@ -68,8 +67,7 @@ public class Conversions {
      */
     public static double falconToMPS(double velocitycounts, double circumference, double gearRatio){
         double wheelRPM = falconToRPM(velocitycounts, gearRatio);
-        double wheelMPS = (wheelRPM * circumference) / 60;
-        return wheelMPS;
+        return (wheelRPM * circumference) / 60; //MPS
     }
 
     /**
